@@ -13,7 +13,7 @@ def infoTec(numRDI):
 
 	#print br.response().read()
 
-	r = br.open(="url chamado"+numero)
+	r = br.open(="url chamado"+numero) #url 
 	soup = BeautifulSoup(r,"html.parser")
 
 	links = soup.find("textarea", {"class":"registro"})
@@ -30,7 +30,7 @@ senha = str(sys.argv[2])
 cj = cookielib.CookieJar()
 br = mechanize.Browser()
 br.set_cookiejar(cj)
-br.open("login")
+br.open("login")#URL da pagina de login
 br.select_form(nr=0)
 br.form['username'] = user
 br.form['password'] = senha
